@@ -16,12 +16,4 @@ export class App {
   get_user_detail(a:number, b:number) {
       return a + b;
   }
-
-  show=true;
-
-  bool:boolean=false
-  onClick() {
-    this.bool=true;
-  }
-
 }

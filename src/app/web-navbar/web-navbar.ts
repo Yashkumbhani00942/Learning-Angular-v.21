@@ -8,5 +8,5 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './web-navbar.scss',
 })
 export class WebNavbar {
-
+  
 }
