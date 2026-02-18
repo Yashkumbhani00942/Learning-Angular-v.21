@@ -1,10 +1,98 @@
-<div class="form">
-  <p>Form Components Works!</p>
-  <!-- <ng-content></ng-content> -->
-  <button (click)="onclick()">Click me</button>
-  @if (show) {
-    <h1>Welcome to the App</h1>
-  }
+  <!-- <div class="form-page-main d-flex flex-column align-item-center"> -->
+    <div class="form-main w-50 mt-5 border rounded-4 py-4 px-5">
+      <h3 class="mb-4">Form grouping in reactive forms</h3>
 
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fuga ipsa sunt facilis? Vel mollitia laudantium, ipsum maxime iste corporis placeat ullam nam ipsa et perspiciatis fugiat maiores nihil itaque dolores consequuntur, quae quas consequatur quia illum, saepe eligendi? Ratione commodi sapiente distinctio, pariatur sit nulla quasi ea eos aut iste esse! Aliquam nihil necessitatibus eveniet harum beatae corporis aperiam reiciendis? Modi laudantium itaque totam quis, sint eos optio atque odio magnam necessitatibus commodi? Id quas doloribus eligendi, beatae nihil magni recusandae nam ullam explicabo a perferendis at totam quae dolorum in, dolorem assumenda et hic eius consequatur quo consectetur.</p>
-</div>
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="row g-3">
+        
+        <div class="col-md-6">
+          <label for="inputName" class="form-label">Name</label>
+          <input formControlName="name" type="text" class="form-control" id="inputName">
+          <span class="text-danger" *ngIf="name?.hasError('required')">Name is Required.</span><br>
+          <span class="text-danger" *ngIf="name?.invalid &&(name?.dirty || name?.touched)">Please write valid user name.</span>
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputSurname" class="form-label">Surname</label>
+          <input formControlName="surname" type="text" class="form-control" id="inputSurname">
+          <span class="text-danger" *ngIf="surname?.hasError('required')">Surname is Required.</span><br>
+          <span class="text-danger" *ngIf="surname?.invalid &&(surname?.dirty || surname?.touched)">Please write valid surname.</span>
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputEmail" class="form-label">Email</label>
+          <input formControlName="email" type="email" class="form-control" id="inputEmail"><br>
+          <span class="text-danger" *ngIf="email?.invalid &&(email?.dirty || email?.touched)">Please write valid Email address.</span>
+        </div>
+        
+        <div class="col-md-6">
+          <label for="inputPassword" class="form-label">Password</label>
+          <input formControlName="password" type="password" class="form-control" id="inputPassword"><br>
+          <span class="text-danger" *ngIf="password?.hasError('required')">Password is Required.</span>
+        </div>
+
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input formControlName="address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input formControlName="city" type="text" class="form-control" id="inputCity">
+        </div>
+        
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">State</label>
+          <select formControlName="state" id="inputState" class="form-select">
+            <option selected>Choose...</option> 
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Meghalaya</option>
+            <option>Mizoram</option>
+            <option>Nagaland</option>
+            <option>Odisha</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Tamil Nadu</option>
+            <option>Telangana</option>
+            <option>Tripura</option>
+            <option>Uttar Pradesh</option>
+            <option>Uttarakhand</option>
+            <option>West Bengal</option>
+          </select>
+        </div>
+        
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Zip Code</label>
+          <input formControlName="zipcode" type="text" class="form-control" id="inputZip">
+        </div>
+        
+        <div class="col-12">
+          <div class="form-check pb-3 border-bottom">
+            <input formControlName="isChecked" class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">Check me Out</label>
+          </div>
+        </div>
+        
+        <div class="col-12 d-flex justify-content-end">
+          <button type="reset" class="btn btn-secondary me-2">Reset</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+      </form>
+
+    </div>
+  <!-- </div> -->

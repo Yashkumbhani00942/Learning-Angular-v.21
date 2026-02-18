@@ -1,19 +1,40 @@
 <div>
-    <table class="product-data">
-        <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
-        </tr>
-        <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-        </tr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#id</th>
+                <th scope="col">Thumbnail</th>
+                <th scope="col">title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Category</th>
+                <th scope="col">Price</th>
+                <th scope="col">Discount</th>
+                <th scope="col">Rating</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Tags</th>
+                <th scope="col">Brand</th>
+                <!-- <th scope="col">images</th> -->
+                <th scope="col" class="text-nowrap">Availability Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of allProductData;let i=index">
+                <td scope="row">{{data.id}}</td>
+                <td><img [src]="data.thumbnail" [alt]="data.title" width="100" height="100"></td>
+                <td [ngClass]="i+1===28?'fw-bold':''">{{data.title}}</td>
+                <td>{{data.description}}</td>
+                <td>{{data.category}}</td>
+
+                <td>{{data.price}}</td>
+                <td>{{data.discountPercentage}}</td>
+                <td>{{data.rating}}</td>
+                <td>{{data.stock}}</td>
+                <td>{{data.tags}}</td>
+                <td>{{data.brand}}</td>
+                <!-- <td><img [src]="data.images" [alt]="data.title" width="300" height="300"></td> -->
+                <td>{{data.availabilityStatus}}</td>
+            </tr>
+        </tbody>
     </table>
 </div>
+<!-- <button class="btn btn-primary">View</button> -->
