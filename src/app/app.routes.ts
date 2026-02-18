@@ -6,6 +6,7 @@ import { About } from './about/about';
 import { Contact } from './contact/contact';
 import { Login } from './login/login';
 import { Userlist } from './userlist/userlist';
+import { Header } from './reusableComponents/header/header';
 
 export const routes: Routes = [
     {
@@ -14,6 +15,10 @@ export const routes: Routes = [
     {
         path: 'home',
         component: Home
+    },
+    {
+        path: 'header',
+        component: Header
     },
     {
         path: 'form',
