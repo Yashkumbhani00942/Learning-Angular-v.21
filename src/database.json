@@ -1,0 +1,28 @@
+{
+  "userDetails": [
+    {
+      "id": "b4ea",
+      "name": "yash",
+      "surname": "kumbhani",
+      "email": "yashkumbhani0@gmail.com",
+      "password": "yash@123",
+      "address": "varachha, surat 395000 ",
+      "city": "Surat",
+      "state": "Gujarat",
+      "zipcode": "395000",
+      "isChecked": "false"
+    },
+    {
+      "id": "42e2",
+      "name": "",
+      "surname": "",
+      "email": "",
+      "password": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "zipcode": "",
+      "isChecked": "false"
+    }
+  ]
+}

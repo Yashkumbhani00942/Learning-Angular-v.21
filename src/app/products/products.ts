@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductService } from '../services/product';
+import { ProductService } from '../services/product-details';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 export class Products {
 
   constructor(private product: ProductService) {
+
   }
 
   allProductData: any = [];
