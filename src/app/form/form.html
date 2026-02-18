@@ -5,17 +5,17 @@
       <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="row g-3">
         
         <div class="col-md-6">
-          <label for="inputName" class="form-label">Name</label>
-          <input formControlName="name" type="text" class="form-control" id="inputName">
-          <span class="text-danger" *ngIf="name?.hasError('required')">Name is Required.</span><br>
-          <span class="text-danger" *ngIf="name?.invalid &&(name?.dirty || name?.touched)">Please write valid user name.</span>
+          <label for="inputFirstName" class="form-label">First Name<span>*</span></label>
+          <input formControlName="firstName" type="text" class="form-control" id="inputFirstName">
+          <span class="text-danger" *ngIf="firstName?.hasError('required')">First Name is Required.</span><br>
+          <span class="text-danger" *ngIf="firstName?.invalid &&(firstName?.dirty || firstName?.touched)">Please write valid user name.</span>
         </div>
 
         <div class="col-md-6">
-          <label for="inputSurname" class="form-label">Surname</label>
-          <input formControlName="surname" type="text" class="form-control" id="inputSurname">
-          <span class="text-danger" *ngIf="surname?.hasError('required')">Surname is Required.</span><br>
-          <span class="text-danger" *ngIf="surname?.invalid &&(surname?.dirty || surname?.touched)">Please write valid surname.</span>
+          <label for="inputLastName" class="form-label">Last Name <span>*</span></label>
+          <input formControlName="lastName" type="text" class="form-control" id="inputLastName">
+          <span class="text-danger" *ngIf="lastName?.hasError('required')">Last Name is Required.</span><br>
+          <span class="text-danger" *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)">Please write valid surname.</span>
         </div>
 
         <div class="col-md-6">
@@ -90,6 +90,7 @@
         <div class="col-12 d-flex justify-content-end">
           <button type="reset" class="btn btn-secondary me-2">Reset</button>
           <button type="submit" class="btn btn-primary">Submit</button>
+          <!-- <p-button label="Check"></p> -->
         </div>
 
       </form>

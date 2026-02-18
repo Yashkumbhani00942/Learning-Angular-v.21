@@ -5,6 +5,7 @@ import { Products } from './products/products';
 import { About } from './about/about';
 import { Contact } from './contact/contact';
 import { Login } from './login/login';
+import { Userlist } from './userlist/userlist';
 
 export const routes: Routes = [
     {
@@ -17,6 +18,10 @@ export const routes: Routes = [
     {
         path: 'form',
         component: Form,
+    },
+    {
+        path: 'userlist',
+        component: Userlist,
     },
     {
         path: 'product',
