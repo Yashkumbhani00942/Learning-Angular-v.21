@@ -2,6 +2,6 @@
     <app-sidebar [bool]="tochild" class="sidebar dashboard-left d-block" [ngClass]="{'active': tochild}"></app-sidebar>
     <div class="dashboard-right vh-100 d-flex flex-column"  [ngClass]="{'active': tochild}">
         <app-header (sendValue)="bool($event)"></app-header>
-        <router-outlet></router-outlet>
+        <router-outlet class="m-3 p-3"></router-outlet>
     </div>
 </div>

@@ -1,1 +1,25 @@
 <p>about works!</p>
+
+<table>
+    <tr>
+        <td>
+            {{courseName}}
+        </td>
+        <td>
+            <input [type]="inputType" >
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" [min]="minlength" [max]="maxlength">
+        </td>
+        <td>
+            <button (click)="showMessage()" class="btn btn-info">Click 2 View</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!-- <button (click)=""></button> -->
+        </td>
+    </tr>
+</table>
