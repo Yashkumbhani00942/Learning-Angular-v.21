@@ -1,0 +1,12 @@
+.dashboard-left {
+    width: 280px;
+}
+.dashboard-right {
+    width: calc(100% - 280px);
+}
+.dashboard-left.active{
+    width: 80px;
+}
+.dashboard-right.active{
+    width: calc(100% - 80px);
+}

@@ -1,19 +1,28 @@
-import { Component } from '@angular/core';
-import { WebNavbar } from './web-navbar/web-navbar';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Sidebar } from './sidebar/sidebar';
+import { Header } from './header/header';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-root',
-  imports: [ RouterOutlet, WebNavbar],
+  imports: [RouterOutlet, Sidebar, Header,CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 
 export class App {
 
-  text = "Welcome to Angular Learning Sessions"
-  get_user_detail(a:number, b:number) {
-      return a + b;
+  // @ViewChild('dashboarddemo') headerComponent!:ElementRef;
+
+  // ngAfterViewInit(){
+  //   console.log(this.headerComponent.nativeElement)
+  //   this.headerComponent.nativeElement.style.backgroundColor='red'
+  // }
+  tochild!: boolean;
+  bool(val: boolean) {
+    console.log(val)
+    this.tochild = val;
   }
 }
