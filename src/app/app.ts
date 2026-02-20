@@ -20,6 +20,7 @@ export class App {
   //   console.log(this.headerComponent.nativeElement)
   //   this.headerComponent.nativeElement.style.backgroundColor='red'
   // }
+  
   tochild!: boolean;
   bool(val: boolean) {
     console.log(val)

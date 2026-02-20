@@ -1,12 +1,20 @@
-.dashboard-left {
-    width: 280px;
+:host {
+    --expand-sidebar: 280px;
+    --collapse-sidebar: 80px;
 }
-.dashboard-right {
-    width: calc(100% - 280px);
+
+.left-sidebar {
+    width: var(--expand-sidebar);
 }
-.dashboard-left.active {
-    width: 80px;
+.dashboard-right-content {
+    width: calc(100% - var(--expand-sidebar));
 }
-.dashboard-right.active {
-    width: calc(100% - 80px);
+.left-sidebar.active {
+    width: var(--collapse-sidebar);
+}
+.dashboard-right-content.active {
+    width: calc(100% - var(--collapse-sidebar));
+}
+.content-area {
+    height: calc(100%);
 }

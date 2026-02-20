@@ -1,25 +1,80 @@
-<p>about works!</p>
-
 <table>
+
+    <tr>
+        <td>
+            <h1>Interpolation - One way Data Binding</h1>
+        </td>
+    </tr>
     <tr>
         <td>
             {{courseName}}
         </td>
+    </tr><br><br>
+    <tr>
         <td>
-            <input [type]="inputType" >
+            <input type="text" value="{{courseName}}">
+        </td>
+    </tr>
+
+        <hr>
+
+    <tr>
+        <td>
+            <h1>Property Binding - One way Data Binding</h1>
         </td>
     </tr>
     <tr>
         <td>
-            <input type="number" [min]="minlength" [max]="maxlength">
+            <input id="input01" [type]="inputType">
         </td>
+    </tr>
+
+        <hr>
+
+    <tr>
+        <td>
+            <h1>Event Binding - One way Data Binding</h1>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h5>input with type number :-</h5>
+            <!-- [minlength]="minlength" [maxlength]="maxlength"  -->
+            <input id="input02" type="number" >  
+        </td>
+    </tr>
+    <br>
+    <tr>
         <td>
             <button (click)="showMessage()" class="btn btn-info">Click 2 View</button>
         </td>
     </tr>
+    <br>
     <tr>
         <td>
-            <!-- <button (click)=""></button> -->
+            <select (change)="OnCityChange()"  id="inputState" class="form-select">
+                <option selected>Select Growing State</option>
+                <option>Assam</option>
+                <option>Tamil Nadu</option>
+                <option>Maharashtra</option>
+                <option>Gujarat</option>
+                <option>Karnataka</option>
+                <option>Uttar Pradesh</option>
+            </select>
         </td>
     </tr>
+        <hr>
+    <tr>
+        <td>
+            <h1>using Ng Model -Two way Data Binding</h1>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text"  [(ngModel)]="courseName">
+        </td>  
+    </tr>
 </table>
+<div>
+
+</div>
