@@ -1,1 +1,9 @@
-
+.sidebar-main a img {
+    height: 54px;
+}
+.sidebar-expand .sidebar-main a img.logo-shape {
+    display: none;
+}
+.sidebar-main a img.full-logo {
+    display: none;
+}

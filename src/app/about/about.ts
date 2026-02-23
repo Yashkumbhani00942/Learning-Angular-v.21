@@ -32,4 +32,12 @@ export class About {
   allData(val:string){
     console.log(val);  
   }
+
+
+  BusinessUnit = "GCC";
+  className="info";
+  inputcheck="checkbox";
+
+
+
 }

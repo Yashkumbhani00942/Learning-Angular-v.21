@@ -1,6 +1,6 @@
 <div #dashboarddemo class="dashboard-demo d-flex">
-    <app-sidebar [bool]="tochild" class="left-sidebar d-block" [ngClass]="{'active': tochild}"></app-sidebar>
-    <div class="dashboard-right-content vh-100 d-flex flex-column"  [ngClass]="{'active': tochild}">
+    <app-sidebar [bool]="tochild" class="left-sidebar d-block" [ngClass]="{'sidebar-expand': tochild}"></app-sidebar>
+    <div class="dashboard-right-content vh-100 d-flex flex-column"  [ngClass]="{'sidebar-expand': tochild}">
         <app-header (sendValue)="bool($event)"></app-header>
         <main class="content-area m-3 p-4 flex-grow-1 overflow-auto">   
             <router-outlet ></router-outlet>

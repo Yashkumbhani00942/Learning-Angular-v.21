@@ -9,11 +9,11 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './sidebar.scss',
 })
 export class Sidebar {
-@Input() bool:any;
+  @Input() bool:any;
 
-ngOnChanges( changes:SimpleChange){
-  console.log(this.bool)
-  console.log(changes);
-  
-}
+  ngOnChanges( changes:SimpleChange) {
+    console.log(this.bool)
+    console.log(changes);
+    
+  }
 }

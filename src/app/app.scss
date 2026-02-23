@@ -9,10 +9,10 @@
 .dashboard-right-content {
     width: calc(100% - var(--expand-sidebar));
 }
-.left-sidebar.active {
+.left-sidebar.sidebar-expand {
     width: var(--collapse-sidebar);
 }
-.dashboard-right-content.active {
+.dashboard-right-content.sidebar-expand {
     width: calc(100% - var(--collapse-sidebar));
 }
 .content-area {
