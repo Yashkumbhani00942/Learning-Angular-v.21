@@ -1,20 +1,36 @@
 :host {
-    --expand-sidebar: 280px;
-    --collapse-sidebar: 80px;
+    --expand-sidebar: 250px;
+    --collapse-sidebar: 70px;
+    --transition-effect: all 0.3s ease-in-out;
 }
 
+.dashboard-demo {
+    transition: var(--transition-effect);
+     
+    &.sidebar-expanded {
+        .left-sidebar {
+            width: var(--expand-sidebar);
+            min-width: var(--expand-sidebar);
+        }
+        .dashboard-right-content {
+            width: calc(100% - var(--expand-sidebar));
+        }
+    }
+
+    &.sidebar-collapsed {
+        .left-sidebar {
+            width: var(--collapse-sidebar);
+            min-width: var(--collapse-sidebar);
+        }
+        .dashboard-right-content {
+            width: calc(100% - var(--collapse-sidebar));
+        }
+    }
+}
 .left-sidebar {
-    width: var(--expand-sidebar);
+    transition: var(--transition-effect);
+    z-index: 9;
 }
 .dashboard-right-content {
-    width: calc(100% - var(--expand-sidebar));
-}
-.left-sidebar.sidebar-expand {
-    width: var(--collapse-sidebar);
-}
-.dashboard-right-content.sidebar-expand {
-    width: calc(100% - var(--collapse-sidebar));
-}
-.content-area {
-    height: calc(100%);
+    transition: var(--transition-effect);
 }
