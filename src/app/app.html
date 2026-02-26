@@ -1,7 +1,19 @@
-<div #dashboarddemo class="dashboard-demo d-flex">
-    <app-sidebar [bool]="tochild" class="sidebar dashboard-left d-block" [ngClass]="{'active': tochild}"></app-sidebar>
-    <div class="dashboard-right vh-100 d-flex flex-column"  [ngClass]="{'active': tochild}">
-        <app-header (sendValue)="bool($event)"></app-header>
-        <router-outlet></router-outlet>
+<div class="dashboard-demo position-relative d-flex" [class.sidebar-collapsed]="!isSidebarExpanded" [class.sidebar-expanded]="isSidebarExpanded">
+
+    <!-- Sidebar View -->
+    <app-sidebar class="left-sidebar d-block vh-100" (toggleSidebar)="toggleSidebar()" [isExpanded]="isSidebarExpanded"></app-sidebar>
+    
+    <!-- Sidebar Right-side View -->
+    <div class="dashboard-right-content vh-100 d-flex flex-column">
+
+        <!-- Header View -->
+        <app-header></app-header>
+
+        <!-- Main Content View -->
+        <main class="content-area p-3 flex-grow-1 overflow-auto">   
+            <router-outlet ></router-outlet>
+        </main>
+
     </div>
+
 </div>

@@ -13,7 +13,7 @@ export class Header {
   
   sidebarView( ) {
     this.isTrue = !this.isTrue  
-    console.log(this.isTrue)
+    // console.log(this.isTrue)
     this.sendValue.emit(this.isTrue)
   }
 

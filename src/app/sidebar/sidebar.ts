@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, SimpleChange } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -9,11 +9,13 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './sidebar.scss',
 })
 export class Sidebar {
-@Input() bool:any;
 
-ngOnChanges( changes:SimpleChange){
-  console.log(this.bool)
-  console.log(changes);
-  
-}
+  @Input() isExpanded: boolean = true;
+  @Output() toggleSidebar = new EventEmitter<void>();
+
+  // Method to emit toggle event to parent
+  onToggleClick() {
+    this.toggleSidebar.emit();
+  }
+
 }
