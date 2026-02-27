@@ -20,7 +20,7 @@ export class Userlist {
   ngOnInit() {
     this.user.getUserData().subscribe((res:any) =>{
       this.allUsersData = res;
-      console.log(this.allUsersData);
+      // console.log(this.allUsersData);
       
     })
     this.cd.markForCheck(); 

@@ -1,60 +1,49 @@
-<div class="sidebar-main vh-100 position-relative d-flex flex-column flex-shrink-0 bg-light">
-    <a routerLink="/home" class="app-logo py-2 px-3 border-bottom d-flex align-items-center link-dark text-decoration-none">
+<div class="sidebar-main vh-100 position-relative d-flex flex-column flex-shrink-0">
+    <a routerLink="/home" class="app-logo py-2 px-3 d-flex align-items-center link-dark text-decoration-none">
         <img class="logo-shape" src="/assets/images/srkaycg-logo-shap.png" alt="srkaycg-logo-shape">
         <img class="full-logo" src="/assets/images/srkaycg-logo.png" alt="srkaycg-logo">
-        <!-- @if (!isExpanded) {
-            <img class="logo-shape" src="/assets/images/srkaycg-logo-shap.png" alt="srkaycg-logo-shape">
-        } @else {
-            <img class="full-logo" src="/assets/images/srkaycg-logo.png" alt="srkaycg-logo">
-        }   -->
     </a>
 
-    <div (click)="onToggleClick()" [attr.aria-label]="isExpanded ? 'Collapse sidebar' : 'Expand sidebar'" 
-      class="arrow-btn position-absolute d-flex flex-row justify-content-center align-items-center">
+    <div (click)="onToggleClick()" 
+         [attr.aria-label]="isExpanded ? 'Collapse sidebar' : 'Expand sidebar'" 
+         class="arrow-btn position-absolute d-flex flex-row justify-content-center align-items-center">
         <i class="pi pi-angle-right" [class.rotated]="!isExpanded"></i>
     </div>
 
-    <ul class="nav nav-pills flex-column m-2 mt-3 mb-auto">
+    <ul class="nav flex-column m-2 mt-3 mb-auto overflow-hidden">
         <li class="nav-item mb-2">
-            <a class="nav-link p-0 d-flex align-items-center" routerLinkActive="active" routerLink="/home">
-                <i class="px-3 pi pi-objects-column"></i>
-                <span class="d-block py-2 menu-item">Home</span> 
+            <a class="nav-link w-100 p-0 d-inline-flex align-items-center" routerLinkActive="active" routerLink="/home">
+                <i class="pi pi-objects-column"></i> <span class="menu-item">Home</span> 
             </a>
         </li>
         <li class="nav-item mb-2">
-            <a class="nav-link p-0 d-flex align-items-center" routerLinkActive="active" routerLink="/userlist">
-                <i class="px-3 pi pi-users"></i>
-                <span class="d-block py-2 menu-item">User List</span> 
+            <a class="nav-link w-100 p-0 d-inline-flex align-items-center" routerLinkActive="active" routerLink="/userlist">
+                <i class="pi pi-users"></i> <span class="menu-item">User List</span> 
             </a>
         </li>
         <li class="nav-item mb-2">
-            <a class="nav-link p-0 d-flex align-items-center" routerLinkActive="active" routerLink="/form">
-                <i class="px-3 pi pi-address-book"></i>
-                <span class="d-block py-2 menu-item">Form</span> 
+            <a class="nav-link w-100 p-0 d-inline-flex align-items-center" routerLinkActive="active" routerLink="/form">
+                <i class="pi pi-address-book"></i> <span class="menu-item">Form</span> 
             </a>
         </li>
         <li class="nav-item mb-2">
-            <a class="nav-link p-0 d-flex align-items-center" routerLinkActive="active" routerLink="/product">
-                <i class="px-3 pi pi-box"></i>
-                <span class="d-block py-2 menu-item">Product</span> 
+            <a class="nav-link w-100 p-0 d-inline-flex align-items-center" routerLinkActive="active" routerLink="/product">
+                <i class="pi pi-box"></i> <span class="menu-item">Product</span> 
             </a>
         </li>
         <li class="nav-item mb-2">
-            <a class="nav-link p-0 d-flex align-items-center" routerLinkActive="active" routerLink="/about">
-                <i class="px-3 pi pi-info-circle"></i>
-                <span class="d-block py-2 menu-item">About</span> 
+            <a class="nav-link w-100 p-0 d-inline-flex align-items-center" routerLinkActive="active" routerLink="/about">
+                <i class="pi pi-info-circle"></i> <span class="menu-item">About</span> 
             </a>
         </li>
         <li class="nav-item mb-2">
-            <a class="nav-link p-0 d-flex align-items-center" routerLinkActive="active" routerLink="/contact">
-                <i class="px-3 pi pi-twitch"></i>
-                <span class="d-block py-2 menu-item">Contact</span> 
+            <a class="nav-link w-100 p-0 d-inline-flex align-items-center" routerLinkActive="active" routerLink="/contact">
+                <i class="pi pi-twitch"></i> <span class="menu-item">Contact</span> 
             </a>
         </li>
         <li class="nav-item mb-2">
-            <a class="nav-link p-0 d-flex align-items-center" routerLinkActive="active" routerLink="/login">
-                <i class="px-3 pi pi-sign-in"></i>
-                <span class="d-block py-2 menu-item">Login</span> 
+            <a class="nav-link w-100 p-0 d-inline-flex align-items-center" routerLinkActive="active" routerLink="/login">
+                <i class="pi pi-sign-in"></i> <span class="menu-item">Login</span> 
             </a>
         </li>
     </ul>
