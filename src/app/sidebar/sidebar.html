@@ -1,5 +1,5 @@
 <div class="sidebar-main vh-100 position-relative d-flex flex-column flex-shrink-0">
-    <a routerLink="/home" class="app-logo py-2 px-3 d-flex align-items-center link-dark text-decoration-none">
+    <a routerLink="/home" class="app-logo py-2 px-3 overflow-hidden d-flex align-items-center link-dark text-decoration-none">
         <img class="logo-shape" src="/assets/images/srkaycg-logo-shap.png" alt="srkaycg-logo-shape">
         <img class="full-logo" src="/assets/images/srkaycg-logo.png" alt="srkaycg-logo">
     </a>
@@ -10,7 +10,7 @@
         <i class="pi pi-angle-right" [class.rotated]="!isExpanded"></i>
     </div>
 
-    <ul class="nav flex-column m-2 mt-3 mb-auto overflow-hidden">
+    <ul class="nav flex-column m-2 mt-3 mb-auto overflow-x-hidden overflow-y-auto">
         <li class="nav-item mb-2">
             <a class="nav-link w-100 p-0 d-inline-flex align-items-center" routerLinkActive="active" routerLink="/home">
                 <i class="pi pi-objects-column"></i> <span class="menu-item">Home</span> 
