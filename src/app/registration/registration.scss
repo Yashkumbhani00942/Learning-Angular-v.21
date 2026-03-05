@@ -1,4 +1,3 @@
-
 // -- -- Login - Registration -- --
 :host {
     --gray-50: #fafafa;
@@ -69,16 +68,16 @@ button {
     font-weight: 600;
     border-radius: var(--border-radius);
 }
-.form-main .signin-title-line, .form-main .forgot-title-line {
+.form-main .signin-title-line {
     font-size: 14px;
 }
 .form-main .signin-title-line span {
     color: var(--gray-500);
 }
-.form-main .signin-title-line a, .form-main .forgot-title-line a {
+.form-main .signin-title-line a {
     font-weight: 600;
 }
-.form-main .signin-title-line a:hover, .form-main .forgot-title-line a {
+.form-main .signin-title-line a:hover {
     text-decoration: underline;
 }
 .form-page-main .form-right-ui {

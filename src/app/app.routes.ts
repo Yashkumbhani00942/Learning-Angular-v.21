@@ -6,10 +6,13 @@ import { About } from './about/about';
 import { Contact } from './contact/contact';
 import { Login } from './login/login';
 import { Userlist } from './userlist/userlist';
+import { PageNotFound } from './page-not-found/page-not-found';
 
 export const routes: Routes = [
     {
-        path: '', redirectTo: 'home', pathMatch: 'full'
+        path: '', 
+        redirectTo: 'home', 
+        pathMatch: 'full'
     },
     {
         path: 'home',
@@ -17,11 +20,11 @@ export const routes: Routes = [
     },
     {
         path: 'form',
-        component: Form,
+        component: Form
     },
     {
         path: 'userlist',
-        component: Userlist,
+        component: Userlist
     },
     {
         path: 'product',
@@ -38,5 +41,13 @@ export const routes: Routes = [
     {
         path: 'login',
         component: Login
+    },
+     {
+        path:'404',
+        component: PageNotFound
+    },
+    {
+        path: '**',
+        redirectTo: '404'
     }
 ];

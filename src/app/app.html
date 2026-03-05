@@ -1,16 +1,23 @@
-<div class="dashboard-demo position-relative d-flex" [class.sidebar-collapsed]="!isSidebarExpanded" [class.sidebar-expanded]="isSidebarExpanded">
+<div 
+    class="dashboard-demo position-relative d-flex" 
+    [class.sidebar-collapsed]="!isSidebarExpanded" 
+    [class.sidebar-expanded]="isSidebarExpanded">
 
-    <!-- Sidebar View -->
-    <app-sidebar class="left-sidebar d-block vh-100" (toggleSidebar)="toggleSidebar()" [isExpanded]="isSidebarExpanded"></app-sidebar>
+    <!-- Sidebar Content -->
+    <app-sidebar 
+        class="left-sidebar d-block" 
+        (toggleSidebar)="toggleSidebar()" 
+        [isExpanded]="isSidebarExpanded">
+    </app-sidebar>
     
-    <!-- Sidebar Right-side View -->
-    <div class="dashboard-right-content vh-100 d-flex flex-column">
+    <!-- Main Content Area -->
+    <div class="dashboard-right-content d-flex flex-column">
 
-        <!-- Header View -->
+        <!-- Header Content -->
         <app-header></app-header>
 
-        <!-- Main Content View -->
-        <main class="content-area p-3 flex-grow-1 overflow-auto">   
+        <!-- Page Content -->
+        <main class="content-area flex-grow-1 overflow-auto">   
             <router-outlet ></router-outlet>
         </main>
 
