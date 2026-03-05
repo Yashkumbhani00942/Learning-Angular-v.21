@@ -1,0 +1,53 @@
+<div class="form-page-main h-100 d-flex flex-row">
+  <div class="left-form-content h-100">
+    <div class="form-main h-100 d-flex flex-column justify-content-center">
+  
+      <div class="brand-logo">
+        <img src="/assets/images/srkaycg-logo-shap.png" alt="srkcg-icon">
+      </div>
+  
+      <div class="auth-page-title">
+        <h4 class="form-title mb-1">Sign Up</h4>
+        <span class="form-subtitle d-block">And lets get started your Journey!</span>
+      </div>
+  
+      <!-- <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="row g-3"> -->
+  
+      <form class="sign-up-form">
+  
+        <div class="col-md-12 input-field-group">
+          <label for="userName" class="form-label d-block">User Name</label>
+          <input formControlName="userName" type="text" class="form-control" id="userName" placeholder="User Name">
+        </div>
+  
+        <div class="col-md-12 input-field-group">
+          <label for="userEmail" class="form-label d-block">User Email</label>
+          <input formControlName="lastName" type="text" class="form-control" id="userEmail" placeholder="Email">
+        </div>
+  
+        <div class="col-md-12 input-field-group">
+          <label for="password" class="form-label d-block">Password</label>
+          <input formControlName="lastName" type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+  
+        <div class="col-md-12 input-field-group">
+          <label for="ConfirmPassword" class="form-label d-block">Confirm Password</label>
+          <input formControlName="confirmPassword" type="password" class="form-control" id="ConfirmPassword" placeholder="Confirm Password">
+        </div>
+  
+        <div class="col-md-12">
+          <button class="btn btn-primary submit-btn w-100" type="button" name="">Sign Up</button>
+        </div>
+  
+      </form>
+  
+      <div class="signin-title-line mt-4 text-center">
+        <span>Already have an account? </span>
+        <a href="#">Sign in</a>
+      </div>
+    </div>
+  </div>
+  <div class="form-right-ui">
+    <!-- <img class="w-100 position-absolute" src="/assets/images/auth-side-bg.png" alt="auth-right-background"> -->
+  </div>
+</div>
