@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
-import { UserDetails } from '../services/user-details';
+import { UserDetails } from '../../services/user-details';
 import { CommonModule } from '@angular/common';
 
 

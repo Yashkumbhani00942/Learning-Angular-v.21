@@ -1,0 +1,18 @@
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+
+@Component({
+  selector: 'app-login',
+  imports: [RouterLink],
+  templateUrl: './login.html',
+  styleUrl: './login.scss',
+})
+export class Login {
+  
+  router = inject(Router)
+
+  onRegPage() {
+    this.router.navigateByUrl('registration')
+  }
+
+}
