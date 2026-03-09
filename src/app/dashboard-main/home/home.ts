@@ -34,6 +34,6 @@ export class Home {
 
   // Computed Signal
 
-  height = signal();
+  // height = signal();
 
 }
