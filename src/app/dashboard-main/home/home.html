@@ -1,16 +1,27 @@
-<h2 class="fw-bold">Signal</h2>
-    <ul>
-        <li>Reactive : Angular track changes</li>
-        <li>UI-Update : Auto update UI when value changes</li>
-        <li>Chnage Dection : Fine Grained(only affected parts)</li>
-        <li>Prformance : Faster, Optimized </li>
-        <li>Syntax : count() </li>
-        <li>Update : set() / update()</li>
-        <li>Types : Writable Signal, Computable Signal, Effect Signal</li>
-    </ul>
+<h2 class="fw-bold">Signals</h2>
+<ul>
+    <li><span class="fw-bold">Reactive :</span> Angular track changes</li>
+    <li><span class="fw-bold">UI-Update :</span> Auto update UI when value changes</li>
+    <li><span class="fw-bold">Chnage Dection :</span> Fine Grained(only affected parts)</li>
+    <li><span class="fw-bold">Prformance :</span> Faster, Optimized </li>
+    <li><span class="fw-bold">Syntax :</span> count() </li>
+    <li><span class="fw-bold">Update :</span> set() / update()</li>
+    <li><span class="fw-bold">Types :</span> Writable Signal, Computable Signal</li>
+</ul>
+
+<br>
+
+<h3>Key Constructs of the Signals API</h3>
+<p class="fw-bold">The core Angular Signals API includes three primary functions:</p>
+<ul>
+    <li> <span class="fw-bold">Signal() :</span> Creates a writable signal for managing local, synchronous state. You can modify its value using the .set() or .update() methods.</li>
+    <li><span class="fw-bold">Computed() :</span> Creates a read-only signal whose value is derived from the values of other signals. It automatically recalculates its value when any of its dependent signals change and is both lazily evaluated and memoized for performance.</li>
+    <li><span class="fw-bold">Effect() :</span> Used to run side effects (e.g., logging, updating external APIs like localStorage, or manual DOM manipulation) whenever one or more signals it depends on change. Effects run automatically when their dependencies are updated.</li>
+</ul>
+
+<br>
 
 <h3 class="fw-bold">Writable Signal</h3>
-<br><br>
 
 <h5>{{data}}</h5>
 <app-button class="test-btn" (click)="updateData()"></app-button>
@@ -23,5 +34,13 @@
 <br><br>
 
 <h3 class="fw-bold">Computed Signal</h3>
-<br><br>
+
+<h5 class="d-inline-block">{{'Height : '+ height()}}</h5>
+<button class="btn btn-primary mx-3" (click)="increaseHeight()">Increase Height (+10)</button>
+<h5 class="d-inline-block">{{'Width : '+ width()}}</h5>
+<button class="btn btn-primary mx-3" (click)="increaseWidth()">Increase Width(+100)</button>
+<h5>{{'Total Area : ' + area()}}</h5>
+<!-- <button class="btn btn-primary" (click)="measureArea()">Measure Area</button> -->
+
+
 
