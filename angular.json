@@ -24,15 +24,17 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              },
-              "src/assets"
+                { "glob": "**/*", "input": "public" },
+            "src/assets",
+            {
+              "glob": "**/*",
+              "input": "node_modules/primeicons/fonts",
+              "output": "/fonts"
+            }
             ],
             "styles": [
-              "node_modules/primeicons/primeicons.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/primeicons/primeicons.css" ,
               "src/styles.scss"
             ],
             "scripts": [
@@ -65,6 +67,10 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "buildTarget": "angular-web-00942:build",
+            "port": 4201
+          },
           "configurations": {
             "production": {
               "buildTarget": "angular-web-00942:build:production"

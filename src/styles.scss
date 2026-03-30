@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-*,
-*::before,
-*::after {
+
+* {
+     font-family: "Inter", sans-serif;
+}
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-     font-family: "Inter", sans-serif;
 }
-
 :root {
     --expand-sidebar: 230px;
     --collapse-sidebar: 70px;
@@ -18,10 +18,10 @@
     --primary-blue-lite: #217dbb80;
     --vibrant-red: #e2262d;
     --vibrant-red-lite: #e2262c80;
-    --energy-orange: #f8991d;  
+    --energy-orange: #f8991d;
     --energy-orange-lite: #f8991d80;
-    --tech-green: #4dae45;	
-    --tech-green-lite: #4eae4580;
+    --tech-green: #4dae45;
+    --tech-green-lite: #4dae4580;
 
     --theme-color: rgb(125 180 219 / 20%);
 }

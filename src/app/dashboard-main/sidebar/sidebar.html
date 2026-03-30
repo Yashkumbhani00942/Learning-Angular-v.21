@@ -4,9 +4,7 @@
         <img class="full-logo" src="/assets/images/srkaycg-logo.png" alt="srkaycg-logo">
     </a>
 
-    <div (click)="onToggleClick()" 
-         [attr.aria-label]="isExpanded ? 'Collapse sidebar' : 'Expand sidebar'" 
-         class="arrow-btn position-absolute d-flex flex-row justify-content-center align-items-center">
+    <div (click)="onToggleClick()" [attr.aria-label]="isExpanded ? 'Collapse sidebar' : 'Expand sidebar'" class="arrow-btn position-absolute d-flex flex-row justify-content-center align-items-center">
         <i class="pi pi-angle-right" [class.rotated]="!isExpanded"></i>
     </div>
 
@@ -43,4 +41,4 @@
         </li>
     </ul>
 
-</div>
+</div> 
